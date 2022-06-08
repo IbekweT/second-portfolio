@@ -1,0 +1,411 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow: auto;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/ii.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+    nav{
+        height: 80px;
+       background: white;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        padding: 0px 50px 0px 100px;
+        color:red;
+    }
+    nav .logo{
+       
+        font-size: 6vmin;
+        color: black;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    
+span{
+    color: navy;
+}
+     ul {
+        display: flex;
+        list-style: none;
+    }
+    nav ul li{
+        margin-right: 10PX;
+    }
+    
+    nav ul li a{
+        color:black;
+        text-decoration: none;
+        font-size:18px ;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 8px 10px;
+        
+    }
+    nav .menu-btn i{
+        color: black;
+        font-size: 22px;
+        cursor: pointer;
+        display: none;
+    }
+    nav ul li a:hover,
+    nav ul li a.active{
+        color: white;
+        background: navy;
+        border-radius: 7px;
+    }
+    #click{
+        display: none;
+        align-items: center;
+    }
+.info{
+    width: 90%;
+    color: #fff;
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.info h1{
+    font-size: 62px;
+}
+.info p{
+    letter-spacing: 1px;
+    font-size: 30PX;
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.button{
+display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+        background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.button:hover{
+    border: 1px solid navy;
+    background: navy;
+    transition: 1s;
+}
+nav .fa-solid{
+    display: none;
+}
+@media screen and (max-width:400px){
+    .about-header h1{
+        
+       font-size: 25px !important;
+      
+    }
+  .header{
+      width: 110% !important;
+      height: 60vh !important;
+  }
+  .about{
+      width: 110% !important;
+  }
+  .services{
+      width: 110% !important;
+  }
+    .contact{
+        width: 110% !important;
+    }
+}
+@media screen and (max-width:700px) {
+    .info{
+        color:white !important;
+    }
+    .info h1{
+        font-size: 20px;
+    }
+     
+    nav .menu-btn i{
+        display: block;
+    }
+    #click:checked ~ .menu-btn i:before{
+        content: "\x";
+    }
+    nav .logo{
+       left: 0.2px;
+    position: relative;
+    bottom: 0%;
+    }
+    nav{
+       width: 100%;
+        position: fixed;
+        top:0;
+    }
+    
+    nav ul{
+        position: fixed;
+        top:80px;
+        left: -100%;
+        background:white;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    
+    nav ul li{
+        margin: 40px 0;
+
+    }
+    nav ul li a{
+        font-size: 20px;
+        display: block;
+    }
+    nav ul li a:hover,
+nav ul li a.active{
+    color: white;
+    background:lightblue;
+    border-radius: 7px;
+}
+}
+
+/*-------about---------*/
+.about-header h1{
+    text-align: center;
+   font-size: 40px;
+   font-weight: 600;
+   background: #fff;
+   padding-top: 100px;
+}
+.about{
+    background: #fff;
+    display: flex;
+    width:80;
+    margin: 20px;
+    padding: 50px;
+    }
+.about-info p{
+    color: navy;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+.about-img{
+    margin: 10px;
+}
+.services{
+    width: 100%;
+    background:rgb(72, 72, 90);
+    color: white;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+  
+}
+.services h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+  
+  
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.box{
+    flex-basis: 31%;
+   background:  rgb(72, 72, 90);
+    border-radius: 10px;
+    border: 1px solid navy;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.box p{
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 1px;
+   
+}
+   .box h3{
+       text-align: center;
+       font-weight: 600;
+       margin: 10px 0;
+   }
+.box:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media screen and (max-width:700px) {
+    .about{
+        flex-direction: column;
+    }
+    .row{
+        flex-direction: column;
+    }
+}.services{
+    font-size: 20px;
+}
+/*------contact-----*/
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   background: #fff;
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 36px;
+    font-weight: bold;
+    color:navy
+}
+.contact .content p{
+   
+    font-weight: bold;
+    color:navy
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.container .container-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+.container .container-info .agu{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+
+
+}.container .container-info .agu .icon{
+    min-width: 60px;
+    height: 60px;
+   display: flex;
+  border: 1px solid navy;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   font-size: 15px;
+
+}
+.container .container-info .agu .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: navy;
+    flex-direction: column;
+    font-weight: 200;
+}
+.container .container-info .agu .text h3{
+    font-weight: 500;
+    color: black;
+}
+.contact-form{
+    width:40%;
+    padding: 40px;
+  background: rgba(0,0,0,0.2);
+   
+}
+.contact-form h2{
+    font-size: 30px;
+    color:  navy;
+    font-weight: 500;
+}
+.contact-form .input-box{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contact-form .input-box input,
+.contact-form .input-box textarea{
+    width:100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid navy;
+    outline: none;
+    resize: none;
+}
+.contact-form .input-box span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: navy;
+}
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box input:valid ~ span,
+.contact-form .input-box textarea:focus ~ span,
+.contact-form .input-box textarea:focus ~ span{
+   font-size: 12px;
+   color: rgba(0,0,0,0.2);
+   transform: translatey(-20px);
+}
+.submit{
+  align-items: center !important;
+display: inline-block;
+text-decoration: none;
+color: #fff;
+border: 1px solid #fff;
+padding: 12px 34px;
+font-size: 13px;
+ background:transparent;
+position: relative;
+cursor: pointer;
+}
+/*-------contact and email-----*/
+.single{
+    text-decoration: none;
+}
+/*------mediaquerry for contact---*/
+@media screen and (max-width:991px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .container-info{
+        margin-bottom: 40px;
+    }
+    .contact .container-info,
+    .contact-form{
+        width: 100%;
+    }
+}
